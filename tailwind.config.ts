@@ -10,6 +10,9 @@ const config = {
 	],
   prefix: "",
   theme: {
+    colors: {
+      glassy: "#00c2df"
+    },
     container: {
       center: true,
       padding: "2rem",
