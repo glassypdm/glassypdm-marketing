@@ -33,6 +33,7 @@ function TopNav() {
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}><Glassy /></NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
+                    {/** 
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className="submenu-trigger">Features</NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -42,17 +43,26 @@ function TopNav() {
                             </ul>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
+                    */}
                     <NavigationMenuItem>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Download</NavigationMenuLink>
-                    </NavigationMenuItem>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+                      <a target="_blank" href='https://github.com/glassypdm/glassypdm-client/releases/latest'>
+                        Download
+                      </a>
+                      </NavigationMenuLink>
+                      </NavigationMenuItem>
+                      {/*
                     <NavigationMenuItem>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contribute</NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>Wiki</NavigationMenuLink>
                     </NavigationMenuItem>
+                    */}
                     <NavigationMenuItem>
+                      <Link href='/about' legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>About</NavigationMenuLink>
+                      </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
