@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Glassy } from '@/components/ui/glassy'
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 
@@ -55,10 +55,14 @@ function TopNav() {
                     <NavigationMenuItem>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contribute</NavigationMenuLink>
                     </NavigationMenuItem>
-                    <NavigationMenuItem>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>Wiki</NavigationMenuLink>
-                    </NavigationMenuItem>
                     */}
+                    <NavigationMenuItem>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+                      <a target="_blank" href='https://wiki.glassypdm.org'>
+                      Wiki
+                      </a>
+                    </NavigationMenuLink>
+                    </NavigationMenuItem>
                     <NavigationMenuItem>
                       <Link href='/about' legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>About</NavigationMenuLink>

@@ -7,9 +7,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <div className="flex flex-col items-center p-24 space-y-4">
-        <div className="text-5xl"><Glassy className="text-5xl"/></div>
-        <div className="text-base">Product Data Management software that respects your filesystem and gets out of your way.</div>
+      <div className="flex flex-col items-center py-24 space-y-4 px-4">
+          <Image src={'/glassypdm-white.png'} width={360} height={90} alt="glassyPDM"/>
+          <div className="grid grid-cols-2">
+        <div className="text-center w-48 self-center justify-self-center">Product Data Management software that respects your filesystem and gets out of your way.</div>
+          <Image src={'/isometricproject.png'} width={500} height={300} alt="projectpage"/>
+          </div>
         <div className="flex flex-row space-x-16">
           <Badge variant={"outline"}>Open Source</Badge>
           <Badge variant={"outline"}>Self Hosted</Badge>
@@ -20,7 +23,7 @@ export default function Home() {
           </a>
         </Button>
       </div>
-      <div className="flex flex-col items-center p-24 space-y-4">
+      <div className="flex flex-col items-center px-4 space-y-4">
         <div>Trusted by</div>
         <div className="flex flex-row space-x-4">
           <Link href={"https://fsae.engineering.asu.edu/"} target="_blank">
